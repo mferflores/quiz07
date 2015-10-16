@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+long fibonacci(long n){
+    long x, c;
+
+    if(n<=1){
+    c=n;
+    return c;
+}
+    else if(n>1){
+        int a=0,b=1;
+        for(x=1;x<n;x++){
+    c=a+b;
+    a=b;
+    b=c;
+  }
+  return c;
+}
+}
+
+int main (){
+long u,v;
+cout<<"Enter the number of the position you want to get from the fibonacci series: ";
+cin>>u;
+v=fibonacci(u);
+cout<<"The fibonacci number in that position is "<<v<<endl;
+return 0;
+}
